@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,11 @@ namespace NorthPoint.Data
     {
         [Key]
         public int PropertyId { get; set; }
+
+        [ForeignKey(nameof(ApplicationUser))]
+        public string UserId { get; set; }
+
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
         [Required]
         [DisplayName("Property Address")]

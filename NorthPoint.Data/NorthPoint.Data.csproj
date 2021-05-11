@@ -57,8 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExComponent.cs" />
     <Compile Include="Financial.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="InComponent.cs" />
+    <Compile Include="Mechanical.cs" />
     <Compile Include="Migrations\202105100214071_InitialCreate.cs" />
     <Compile Include="Migrations\202105100214071_InitialCreate.designer.cs">
       <DependentUpon>202105100214071_InitialCreate.cs</DependentUpon>
@@ -70,6 +73,14 @@
     <Compile Include="Migrations\202105111738486_Finincial.cs" />
     <Compile Include="Migrations\202105111738486_Finincial.designer.cs">
       <DependentUpon>202105111738486_Finincial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105111804349_foreignKey.cs" />
+    <Compile Include="Migrations\202105111804349_foreignKey.designer.cs">
+      <DependentUpon>202105111804349_foreignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105112017382_Mechanical.cs" />
+    <Compile Include="Migrations\202105112017382_Mechanical.designer.cs">
+      <DependentUpon>202105112017382_Mechanical.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +99,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105111738486_Finincial.resx">
       <DependentUpon>202105111738486_Finincial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105111804349_foreignKey.resx">
+      <DependentUpon>202105111804349_foreignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112017382_Mechanical.resx">
+      <DependentUpon>202105112017382_Mechanical.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
