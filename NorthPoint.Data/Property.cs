@@ -87,7 +87,12 @@ namespace NorthPoint.Data
 
         [DisplayName("Date Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
-
+        public int ListPrice { get; set; }
+        public int DownPayment { get; set; }
+        public int MonthlyPayments { get; set; }
+        public object RemainingYearOnLoan { get; set; }
+        public TypeOfMortgage TypeOfMortgages { get; set; }
+        public object RemainingYearsOnLoan { get; set; }
     }
 
     public enum HomeType

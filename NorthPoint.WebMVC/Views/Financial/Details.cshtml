@@ -1,0 +1,106 @@
+﻿@model NorthPoint.Models.Financial.FinancialDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FinancialDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ListPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ListPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchasePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchasePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LendersName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LendersName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InterestRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InterestRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DownPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DownPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyPayments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyPayments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxAssessment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxAssessment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnnualTaxAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnnualTaxAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinancialId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinancialId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
