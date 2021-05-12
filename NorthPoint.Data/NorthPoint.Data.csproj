@@ -62,25 +62,13 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="InComponent.cs" />
     <Compile Include="Mechanical.cs" />
-    <Compile Include="Migrations\202105100214071_InitialCreate.cs" />
-    <Compile Include="Migrations\202105100214071_InitialCreate.designer.cs">
-      <DependentUpon>202105100214071_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202105120014552_InitialCreate.cs" />
+    <Compile Include="Migrations\202105120014552_InitialCreate.designer.cs">
+      <DependentUpon>202105120014552_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105100215577_initial.cs" />
-    <Compile Include="Migrations\202105100215577_initial.designer.cs">
-      <DependentUpon>202105100215577_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105111738486_Finincial.cs" />
-    <Compile Include="Migrations\202105111738486_Finincial.designer.cs">
-      <DependentUpon>202105111738486_Finincial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105111804349_foreignKey.cs" />
-    <Compile Include="Migrations\202105111804349_foreignKey.designer.cs">
-      <DependentUpon>202105111804349_foreignKey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105112017382_Mechanical.cs" />
-    <Compile Include="Migrations\202105112017382_Mechanical.designer.cs">
-      <DependentUpon>202105112017382_Mechanical.cs</DependentUpon>
+    <Compile Include="Migrations\202105120024054_initial.cs" />
+    <Compile Include="Migrations\202105120024054_initial.designer.cs">
+      <DependentUpon>202105120024054_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,20 +79,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105100214071_InitialCreate.resx">
-      <DependentUpon>202105100214071_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105120014552_InitialCreate.resx">
+      <DependentUpon>202105120014552_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105100215577_initial.resx">
-      <DependentUpon>202105100215577_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105111738486_Finincial.resx">
-      <DependentUpon>202105111738486_Finincial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105111804349_foreignKey.resx">
-      <DependentUpon>202105111804349_foreignKey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105112017382_Mechanical.resx">
-      <DependentUpon>202105112017382_Mechanical.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105120024054_initial.resx">
+      <DependentUpon>202105120024054_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

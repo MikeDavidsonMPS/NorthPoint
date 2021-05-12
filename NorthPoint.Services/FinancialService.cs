@@ -23,11 +23,12 @@ namespace NorthPoint.Services
             {
                 var query =
                 ctx
-                    .PropertyProfiles
+                    .Financials
                     .Select(e =>
                     new FinancialListItem
                     {
                         PropertyId = e.PropertyId,
+                        FinancialId = e.FinancialId,
                         Address = e.Address,
                         City = e.City,
                         State = e.State,

@@ -12,12 +12,12 @@ namespace NorthPoint.Models.Financial
     public class FinancialListItem
     {
         public int PropertyId { get; set; }
-        public int FinincialId { get; set; }
+        public int FinancialId { get; set; }
 
         [DisplayName("Property Address")]
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
+        public object Address { get; set; }
+        public object City { get; set; }
+        public object State { get; set; }
 
 
 
@@ -58,6 +58,6 @@ namespace NorthPoint.Models.Financial
         [DisplayName("Annual Tax Amount")]
         public int AnnualTaxAmount { get; set; }
         public object RemainingYearsOnLoan { get; set; }
-        public object RemainingYearOnLoan { get; set; }
+    
     }
 }

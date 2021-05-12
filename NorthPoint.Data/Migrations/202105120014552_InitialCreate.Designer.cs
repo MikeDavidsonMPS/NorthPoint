@@ -7,13 +7,13 @@ namespace NorthPoint.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Mechanical : IMigrationMetadata
+    public sealed partial class InitialCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Mechanical));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202105112017382_Mechanical"; }
+            get { return "202105120014552_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

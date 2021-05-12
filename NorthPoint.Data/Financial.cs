@@ -67,7 +67,9 @@ namespace NorthPoint.Data
         [Required]
         [DisplayName("Annual Tax Amount")]
         public int AnnualTaxAmount { get; set; }
-   
+        public int PropertyId { get; set; }
+        public object City { get; set; }
+        public object State { get; set; }
     }
 
     public enum TypeOfMortgage

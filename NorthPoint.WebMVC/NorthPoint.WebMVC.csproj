@@ -173,9 +173,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ExComponentController.cs" />
     <Compile Include="Controllers\FinancialController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MechanicalController.cs" />
     <Compile Include="Controllers\PropertyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -258,6 +260,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ExComponent\" />
+    <Folder Include="Views\Mechanical\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

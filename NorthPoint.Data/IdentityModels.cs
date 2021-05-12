@@ -34,9 +34,9 @@ namespace NorthPoint.Data
 
         public DbSet<Property> PropertyProfiles { get; set; }
         public DbSet<Financial> Financials { get; set; }
-
-
-
+        public DbSet<ExComponent> ExComponents { get; set; }
+        //public DbSet<Mechanical> Mechanicals { get; set; }
+       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

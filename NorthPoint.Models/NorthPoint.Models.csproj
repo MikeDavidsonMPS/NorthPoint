@@ -57,10 +57,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExComponent\ExComponentCreate.cs" />
+    <Compile Include="ExComponent\ExComponentDetail.cs" />
+    <Compile Include="ExComponent\ExComponentEdit.cs" />
+    <Compile Include="ExComponent\ExComponentListItem.cs" />
     <Compile Include="Financial\FinancialCreate.cs" />
     <Compile Include="Financial\FinancialDetail.cs" />
     <Compile Include="Financial\FinancialEdit.cs" />
     <Compile Include="Financial\FinancialListItem.cs" />
+    <Compile Include="Mechanical\MechanicalCreate.cs" />
+    <Compile Include="Mechanical\MechanicalDetail.cs" />
+    <Compile Include="Mechanical\MechanicalEdit.cs" />
+    <Compile Include="Mechanical\MechanicalListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property\PropertyCreate.cs" />
     <Compile Include="Property\PropertyDetail.cs" />

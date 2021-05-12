@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace NorthPoint.WebMVC.Controllers
 {
-    class FinancialController : Controller
+    public class FinancialController : Controller
     {
        
         // GET: Investment Portfolio

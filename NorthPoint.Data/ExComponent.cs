@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NorthPoint.Data
 {
-     class ExComponent
+     public class ExComponent
     {
         [Key]
         public int ExComplId { get; set; }
@@ -140,9 +140,7 @@ namespace NorthPoint.Data
 
         [DisplayName("Fence Condition")]
         public Condition FenceCondition{ get; set; }
-
-
-
+        public int PropertyId { get; set; }
     }
 
     public enum Foundations
