@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Inital : DbMigration
     {
         public override void Up()
         {
@@ -11,7 +11,8 @@
                 "dbo.ExComponent",
                 c => new
                     {
-                        ExComplId = c.Int(nullable: false, identity: true),
+                        ExterId = c.Int(nullable: false, identity: true),
+                        UserId = c.String(maxLength: 128),
                         Foundation = c.Int(nullable: false),
                         FoundationCondition = c.Int(nullable: false),
                         FloorStructure = c.Int(nullable: false),
@@ -48,62 +49,7 @@
                         FenceCondition = c.Int(nullable: false),
                         PropertyId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.ExComplId);
-            
-            CreateTable(
-                "dbo.Financial",
-                c => new
-                    {
-                        FinancialId = c.Int(nullable: false, identity: true),
-                        ListPrice = c.Int(nullable: false),
-                        PurchasePrice = c.Int(nullable: false),
-                        LendersName = c.String(nullable: false),
-                        TypeOfMortgages = c.Int(nullable: false),
-                        InterestRate = c.Int(nullable: false),
-                        DownPayment = c.Int(nullable: false),
-                        MonthlyPayments = c.Int(nullable: false),
-                        TaxAssessment = c.Int(nullable: false),
-                        AnnualTaxAmount = c.Int(nullable: false),
-                        PropertyId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.FinancialId);
-            
-            CreateTable(
-                "dbo.Property",
-                c => new
-                    {
-                        PropertyId = c.Int(nullable: false, identity: true),
-                        UserId = c.String(maxLength: 128),
-                        Address = c.String(nullable: false),
-                        City = c.String(nullable: false),
-                        State = c.String(nullable: false),
-                        ZipCode = c.Int(nullable: false),
-                        PurchasePrice = c.Int(nullable: false),
-                        YearBuilt = c.Int(nullable: false),
-                        SqFt = c.Int(nullable: false),
-                        HomeTypes = c.Int(nullable: false),
-                        ArchitecturalStyle = c.Int(nullable: false),
-                        Construction = c.Int(nullable: false),
-                        RoofType = c.Int(nullable: false),
-                        FoundationType = c.Int(nullable: false),
-                        NewConstruction = c.Boolean(nullable: false),
-                        HistroicRegister = c.Boolean(nullable: false),
-                        NumberOfLevels = c.Int(nullable: false),
-                        AttachedGarage = c.Boolean(nullable: false),
-                        GarageSpaces = c.Int(nullable: false),
-                        NumberOfFireplaces = c.Int(nullable: false),
-                        NumberOfBathrooms = c.Int(nullable: false),
-                        NumberOfFullBaths = c.Int(nullable: false),
-                        NumberOfHaftBaths = c.Int(nullable: false),
-                        NumberOfBedrooms = c.Int(nullable: false),
-                        CreateUtc = c.DateTimeOffset(nullable: false, precision: 7),
-                        ModifiedUtc = c.DateTimeOffset(precision: 7),
-                        ListPrice = c.Int(nullable: false),
-                        DownPayment = c.Int(nullable: false),
-                        MonthlyPayments = c.Int(nullable: false),
-                        TypeOfMortgages = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.PropertyId)
+                .PrimaryKey(t => t.ExterId)
                 .ForeignKey("dbo.ApplicationUser", t => t.UserId)
                 .Index(t => t.UserId);
             
@@ -169,6 +115,86 @@
                 .Index(t => t.IdentityRole_Id);
             
             CreateTable(
+                "dbo.Financial",
+                c => new
+                    {
+                        FinId = c.Int(nullable: false, identity: true),
+                        UserId = c.String(maxLength: 128),
+                        ListPrice = c.Int(nullable: false),
+                        PurchasePrice = c.Int(nullable: false),
+                        LendersName = c.String(nullable: false),
+                        TypeOfMortgages = c.Int(nullable: false),
+                        InterestRate = c.Int(nullable: false),
+                        DownPayment = c.Int(nullable: false),
+                        MonthlyPayments = c.Int(nullable: false),
+                        TaxAssessment = c.Int(nullable: false),
+                        AnnualTaxAmount = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.FinId)
+                .ForeignKey("dbo.ApplicationUser", t => t.UserId)
+                .Index(t => t.UserId);
+            
+            CreateTable(
+                "dbo.Mechanical",
+                c => new
+                    {
+                        MechId = c.Int(nullable: false, identity: true),
+                        UserId = c.String(maxLength: 128),
+                        ElecService = c.Int(nullable: false),
+                        ElecServiceCondition = c.Int(nullable: false),
+                        ServicePanel = c.Int(nullable: false),
+                        PanelCondition = c.Int(nullable: false),
+                        Wiring = c.Int(nullable: false),
+                        WiringCondition = c.Int(nullable: false),
+                        SwitchPlug = c.Int(nullable: false),
+                        GFCPlug = c.Int(nullable: false),
+                        SmokeDetectors = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.MechId)
+                .ForeignKey("dbo.ApplicationUser", t => t.UserId)
+                .Index(t => t.UserId);
+            
+            CreateTable(
+                "dbo.Property",
+                c => new
+                    {
+                        PropertyId = c.Int(nullable: false, identity: true),
+                        UserId = c.String(maxLength: 128),
+                        Address = c.String(nullable: false),
+                        City = c.String(nullable: false),
+                        State = c.String(nullable: false),
+                        ZipCode = c.Int(nullable: false),
+                        PurchasePrice = c.Int(nullable: false),
+                        DateTime = c.Int(nullable: false),
+                        SqFt = c.Int(nullable: false),
+                        HomeTypes = c.Int(nullable: false),
+                        ArchitecturalStyle = c.Int(nullable: false),
+                        Construction = c.Int(nullable: false),
+                        RoofType = c.Int(nullable: false),
+                        FoundationType = c.Int(nullable: false),
+                        NewConstruction = c.Boolean(nullable: false),
+                        HistroicRegister = c.Boolean(nullable: false),
+                        NumberOfLevels = c.Int(nullable: false),
+                        AttachedGarage = c.Boolean(nullable: false),
+                        GarageSpaces = c.Int(nullable: false),
+                        NumberOfFireplaces = c.Int(nullable: false),
+                        NumberOfBathrooms = c.Int(nullable: false),
+                        NumberOfFullBaths = c.Int(nullable: false),
+                        NumberOfHaftBaths = c.Int(nullable: false),
+                        NumberOfBedrooms = c.Int(nullable: false),
+                        ListPrice = c.Int(nullable: false),
+                        DownPayment = c.Int(nullable: false),
+                        MonthlyPayments = c.Int(nullable: false),
+                        TypeOfMortgages = c.Int(nullable: false),
+                        CreateUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(precision: 7),
+                        YearBuilt = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.PropertyId)
+                .ForeignKey("dbo.ApplicationUser", t => t.UserId)
+                .Index(t => t.UserId);
+            
+            CreateTable(
                 "dbo.IdentityRole",
                 c => new
                     {
@@ -183,21 +209,28 @@
         {
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
             DropForeignKey("dbo.Property", "UserId", "dbo.ApplicationUser");
+            DropForeignKey("dbo.Mechanical", "UserId", "dbo.ApplicationUser");
+            DropForeignKey("dbo.Financial", "UserId", "dbo.ApplicationUser");
+            DropForeignKey("dbo.ExComponent", "UserId", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
+            DropIndex("dbo.Property", new[] { "UserId" });
+            DropIndex("dbo.Mechanical", new[] { "UserId" });
+            DropIndex("dbo.Financial", new[] { "UserId" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
-            DropIndex("dbo.Property", new[] { "UserId" });
+            DropIndex("dbo.ExComponent", new[] { "UserId" });
             DropTable("dbo.IdentityRole");
+            DropTable("dbo.Property");
+            DropTable("dbo.Mechanical");
+            DropTable("dbo.Financial");
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
-            DropTable("dbo.Property");
-            DropTable("dbo.Financial");
             DropTable("dbo.ExComponent");
         }
     }

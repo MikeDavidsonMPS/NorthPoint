@@ -62,13 +62,9 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="InComponent.cs" />
     <Compile Include="Mechanical.cs" />
-    <Compile Include="Migrations\202105120014552_InitialCreate.cs" />
-    <Compile Include="Migrations\202105120014552_InitialCreate.designer.cs">
-      <DependentUpon>202105120014552_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105120024054_initial.cs" />
-    <Compile Include="Migrations\202105120024054_initial.designer.cs">
-      <DependentUpon>202105120024054_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202105120533106_Inital.cs" />
+    <Compile Include="Migrations\202105120533106_Inital.designer.cs">
+      <DependentUpon>202105120533106_Inital.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,11 +75,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105120014552_InitialCreate.resx">
-      <DependentUpon>202105120014552_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105120024054_initial.resx">
-      <DependentUpon>202105120024054_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105120533106_Inital.resx">
+      <DependentUpon>202105120533106_Inital.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
