@@ -51,7 +51,7 @@ namespace NorthPoint.Services
             var entity =
                 new Financial()
                 {
-                    Address = model.Address,
+                    Address = (string)model.Address,
                     ListPrice = model.ListPrice,
                     PurchasePrice = model.PurchasePrice,
                     LendersName = model.LendersName,
@@ -59,7 +59,7 @@ namespace NorthPoint.Services
                     InterestRate = model.InterestRate,
                     DownPayment = model.DownPayment,
                     MonthlyPayments = model.MonthlyPayments,
-                    RemainingYearsOnLoan = model.RemainingYearsOnLoan,
+                    RemainingYearsOnLoan = (string)model.RemainingYearsOnLoan,
                     TaxAssessment = model.TaxAssessment,
                     AnnualTaxAmount = model.AnnualTaxAmount
 
@@ -118,7 +118,7 @@ namespace NorthPoint.Services
                 entity.InterestRate = model.InterestRate;
                 entity.DownPayment = model.DownPayment;
                 entity.MonthlyPayments = model.MonthlyPayments;
-                entity.RemainingYearsOnLoan = model.RemainingYearsOnLoan;
+                entity.RemainingYearsOnLoan = (string)model.RemainingYearsOnLoan;
                 entity.TaxAssessment = model.TaxAssessment;
                 entity.AnnualTaxAmount = model.AnnualTaxAmount;
 

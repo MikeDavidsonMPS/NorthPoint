@@ -20,7 +20,7 @@ namespace NorthPoint.Data
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         [Required]
-        public object Address { get; set; }
+        public string Address { get; set; }
 
 
         [Required]

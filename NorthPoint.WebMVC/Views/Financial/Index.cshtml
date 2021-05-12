@@ -47,53 +47,59 @@
         <th>
             @Html.DisplayNameFor(model => model.AnnualTaxAmount)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RemainingYearsOnLoan)
+        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FinId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.State)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ListPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PurchasePrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LendersName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InterestRate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DownPayment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MonthlyPayments)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TaxAssessment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnnualTaxAmount)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.FinId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.FinId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.FinId })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.FinId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.City)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.State)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ListPrice)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PurchasePrice)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LendersName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.InterestRate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DownPayment)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MonthlyPayments)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TaxAssessment)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AnnualTaxAmount)
+    </td>
+    <th>
+        @Html.DisplayNameFor(model => model.RemainingYearsOnLoan)
+    </th>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.FinId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.FinId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.FinId })
+    </td>
+</tr>
 }
 
 </table>

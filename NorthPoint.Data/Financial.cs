@@ -20,7 +20,9 @@ namespace NorthPoint.Data
         public virtual ApplicationUser ApplicationUser { get; set; }
 
 
-        public object Address { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
 
         [DisplayName("List Price")]
         public int ListPrice { get; set; }
@@ -51,7 +53,7 @@ namespace NorthPoint.Data
 
         [Required]
         [DisplayName("Remaining Years on Loan")]
-        public object RemainingYearsOnLoan { get; set; }
+        public string RemainingYearsOnLoan { get; set; }
 
         [Required]
         [DisplayName("Tax Assessment")]
@@ -60,8 +62,7 @@ namespace NorthPoint.Data
         [Required]
         [DisplayName("Annual Tax Amount")]
         public int AnnualTaxAmount { get; set; }
-        public object City { get; set; }
-        public object State { get; set; }
+
     }
 
 

@@ -13,6 +13,7 @@ namespace NorthPoint.Data
     {
         [Key]
         public int ExterId { get; set; }
+        public int PropertyId { get; set; }
 
         [ForeignKey(nameof(ApplicationUser))]
         public string UserId { get; set; }
@@ -20,7 +21,7 @@ namespace NorthPoint.Data
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         [Required]
-        public object Address { get; set; }
+        public string Address { get; set; }
 
 
         [Required]
@@ -140,7 +141,7 @@ namespace NorthPoint.Data
 
         [DisplayName("Fence Condition")]
         public Condition FenceCondition{ get; set; }
-        public int PropertyId { get; set; }
+        
     }
 
     public enum Foundations

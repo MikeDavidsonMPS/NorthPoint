@@ -49,7 +49,7 @@ namespace NorthPoint.Services
             var entity =
                 new Mechanical()
                 {
-                    Address = model.Address,
+                    Address = (string)model.Address,
                     ElecService = model.ElecService,
                     ElecServiceCondition = model.ElecServiceCondition,
                     ServicePanel = model.ServicePanel,
@@ -103,7 +103,7 @@ namespace NorthPoint.Services
                         .Mechanicals
                         .Single(e => e.MechId == model.MechId);
 
-                entity.Address = model.Address;
+                entity.Address = (string)model.Address;
                 entity.ElecService = model.ElecService; ;
                 entity.ElecServiceCondition = model.ElecServiceCondition;
                 entity.ServicePanel = model.ServicePanel;

@@ -58,7 +58,7 @@ namespace NorthPoint.Services
             var entity =
                 new ExComponent()
                 {
-                    Address = model.Address,
+                    Address = (string)model.Address,
                     Foundation = model.Foundation,
                     FoundationCondition = model.FoundationCondition,
                     FloorStructure = model.FloorStructure,
