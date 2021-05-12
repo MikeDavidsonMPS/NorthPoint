@@ -61,7 +61,7 @@ namespace NorthPoint.WebMVC.Controllers
             var model =
                 new FinancialEdit
                 {
-                    FinancialId = detail.FinancialId,
+                    FinId = detail.FinId,
                     Address = detail.Address,
                     ListPrice = detail.ListPrice,
                     PurchasePrice = detail.PurchasePrice,
@@ -84,7 +84,7 @@ namespace NorthPoint.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.FinancialId != id)
+            if (model.FinId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

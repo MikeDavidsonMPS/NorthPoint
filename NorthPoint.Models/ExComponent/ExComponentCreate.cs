@@ -11,6 +11,7 @@ namespace NorthPoint.Models.ExComponent
 {
     public class ExComponentCreate
     {
+
         [Required]
         public object Address { get; set; }
 
@@ -46,7 +47,6 @@ namespace NorthPoint.Models.ExComponent
         [DisplayName("Roof Cover")]
         public RoofCover RoofCover { get; set; }
 
-        [Required]
         [DisplayName("Roof Condition")]
         public Condition RoofCondition { get; set; }
 
@@ -98,39 +98,32 @@ namespace NorthPoint.Models.ExComponent
         [DisplayName("Walkway Conidition")]
         public Condition WalkCondition { get; set; }
 
-        [Required]
         [DisplayName("Garage Doors")]
         public GarageDoors GarageDoors { get; set; }
 
         [DisplayName("Garage Door Condition")]
         public Condition GarageDoorCond { get; set; }
 
-        [Required]
         [DisplayName("Porch and Patio")]
         public PorchAndPatio PorchAndPatio { get; set; }
 
         [DisplayName("Porch/Patio Condition")]
         public Condition PorchCondition { get; set; }
 
-        [Required]
         [DisplayName("Surface Drainage")]
         public SurfaceDrainage SurfaceDrainage { get; set; }
 
         [DisplayName("Drainage Condition")]
         public Condition SurfaceDrainCondition { get; set; }
 
-        [Required]
         [DisplayName("Retaining Walls")]
         public RetainingWall RetainingWall { get; set; }
 
         [DisplayName("Wall Condition")]
         public Condition RetainingWallCondition { get; set; }
-
-        [Required]
         public Fencing Fencing { get; set; }
 
         [DisplayName("Fence Condition")]
         public Condition FenceCondition { get; set; }
-        public int ExComplId { get; set; }
     }
 }

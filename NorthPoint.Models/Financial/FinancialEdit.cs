@@ -10,8 +10,7 @@ namespace NorthPoint.Models.Financial
 {
     public class FinancialEdit
     {
-        [DisplayName("Financial ID")]
-        public int FinancialId { get; set; }
+        public int FinId { get; set; }
         public string Address { get; set; }
 
         [DisplayName("List Price")]

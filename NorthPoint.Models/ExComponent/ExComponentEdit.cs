@@ -11,7 +11,7 @@ namespace NorthPoint.Models.ExComponent
 {
     public class ExComponentEdit
     {
-        public int ExComplId { get; set; }
+        public int ExterId { get; set; }
 
         public object Address { get; set; }
 

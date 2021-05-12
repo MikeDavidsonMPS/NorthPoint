@@ -11,8 +11,6 @@ namespace NorthPoint.Models.Property
     {
         public int PropertyId { get; set; }
 
-
-        [DisplayName("Property Address")]
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }

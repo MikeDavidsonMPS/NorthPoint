@@ -19,6 +19,7 @@ namespace NorthPoint.Data
 
         public virtual ApplicationUser ApplicationUser { get; set; }
 
+
         [Required]
         [DisplayName("Property Address")]
         public string Address { get; set; }
@@ -37,7 +38,7 @@ namespace NorthPoint.Data
         public int PurchasePrice { get; set; }
 
         [DisplayName("Year Built")]
-        public int YearBuilt { get; set; }
+        public int DateTime { get; set; }
 
         [Required]
         [DisplayName("Square Footage")]
@@ -88,17 +89,19 @@ namespace NorthPoint.Data
         [DisplayName("# of Bedrooms")]
         public int NumberOfBedrooms { get; set; }
 
-        [DisplayName("Date Created")]
-        public DateTimeOffset CreateUtc { get; set; }
-
-        [DisplayName("Date Modified")]
-        public DateTimeOffset? ModifiedUtc { get; set; }
         public int ListPrice { get; set; }
         public int DownPayment { get; set; }
         public int MonthlyPayments { get; set; }
         public object RemainingYearOnLoan { get; set; }
         public TypeOfMortgage TypeOfMortgages { get; set; }
         public object RemainingYearsOnLoan { get; set; }
+
+        [DisplayName("Date Created")]
+        public DateTimeOffset CreateUtc { get; set; }
+
+        [DisplayName("Date Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
+        public DateTime YearBuilt { get; set; }
     }
 
     public enum HomeType

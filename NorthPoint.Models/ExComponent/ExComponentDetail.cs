@@ -11,9 +11,6 @@ namespace NorthPoint.Models.ExComponent
 {
     public class ExComponentDetail
     {
-        public int ExComplId { get; set; }
-
-        [Required]
         public object Address { get; set; }
 
         [DisplayName("Foundation")]
@@ -114,5 +111,6 @@ namespace NorthPoint.Models.ExComponent
 
         [DisplayName("Fence Condition")]
         public Condition FenceCondition { get; set; }
+        public int ExterId { get; set; }
     }
 }

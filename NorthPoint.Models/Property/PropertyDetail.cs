@@ -10,18 +10,14 @@ namespace NorthPoint.Models.Property
 {
     public class PropertyDetails
     {
-        public int PropertyId { get; set; }
-
-
         [DisplayName("Property Address")]
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
 
-
-
         [DisplayName("Zip Code")]
         public int ZipCode { get; set; }
+
 
         [DisplayName("Purchase Price")]
         public int PurchasePrice { get; set; }
@@ -76,6 +72,6 @@ namespace NorthPoint.Models.Property
 
         [DisplayName("# of Bedrooms")]
         public int NumberOfBedrooms { get; set; }
-
+        public int PropertyId { get; set; }
     }
 }

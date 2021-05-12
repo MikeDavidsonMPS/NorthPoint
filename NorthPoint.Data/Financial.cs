@@ -12,17 +12,12 @@ namespace NorthPoint.Data
     public class Financial
     {
         [Key]
-        public int FinancialId { get; set; }
+        public int FinId { get; set; }
 
-        //[ForeignKey(nameof(ApplicationUser))]
-        //public string UserId { get; set; }
+        [ForeignKey(nameof(ApplicationUser))]
+        public string UserId { get; set; }
 
-        //public virtual ApplicationUser ApplicationUser { get; set; }
-
-        //[ForeignKey(nameof(PropertyId))]
-        //public string PropertyId { get; set; }
-
-        //public virtual Property Property { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
 
         public object Address { get; set; }
@@ -33,7 +28,6 @@ namespace NorthPoint.Data
         [Required]
         [DisplayName("Purchase Price")]
         public int PurchasePrice { get; set; }
-
 
         [Required]
         [DisplayName("Lender's Name")]
@@ -59,7 +53,6 @@ namespace NorthPoint.Data
         [DisplayName("Remaining Years on Loan")]
         public object RemainingYearsOnLoan { get; set; }
 
-
         [Required]
         [DisplayName("Tax Assessment")]
         public int TaxAssessment { get; set; }
@@ -67,10 +60,10 @@ namespace NorthPoint.Data
         [Required]
         [DisplayName("Annual Tax Amount")]
         public int AnnualTaxAmount { get; set; }
-        public int PropertyId { get; set; }
         public object City { get; set; }
         public object State { get; set; }
     }
+
 
     public enum TypeOfMortgage
     {
@@ -102,6 +95,7 @@ namespace NorthPoint.Data
         ThreeAndThreeARM,
         [Description("3/1 ARM Loan")]
         ThreeAndOneARM,
-
     }
+
+    
 }

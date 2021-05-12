@@ -12,7 +12,6 @@ namespace NorthPoint.Models.Property
     public class PropertyCreate
     {
         [Required]
-        [DisplayName("Property Address")]
         public string Address { get; set; }
 
         [Required]

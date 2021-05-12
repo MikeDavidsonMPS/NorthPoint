@@ -27,16 +27,18 @@ namespace NorthPoint.Services
                     .Select(e =>
                     new FinancialListItem
                     {
-                        PropertyId = e.PropertyId,
-                        FinancialId = e.FinancialId,
+                        FinId = e.FinId,
                         Address = e.Address,
                         City = e.City,
                         State = e.State,
                         ListPrice = e.ListPrice,
-                        PurchasePrice = e.PurchasePrice,
-                        TypeOfMortgages = e.TypeOfMortgages,
+                        LendersName = e.LendersName,
+                        TypeOfMortgage = e.TypeOfMortgages,
+                        InterestRate = e.InterestRate,
                         DownPayment = e.DownPayment,
                         MonthlyPayments = e.MonthlyPayments,
+                        TaxAssessment = e.TaxAssessment,
+                        AnnualTaxAmount = e.AnnualTaxAmount,
                         RemainingYearsOnLoan = e.RemainingYearsOnLoan
 
                     });
@@ -77,7 +79,7 @@ namespace NorthPoint.Services
                 var entity =
                     ctx
                         .Financials
-                        .Single(e => e.FinancialId == id);
+                        .Single(e => e.FinId == id);
 
                 return
                     new FinancialDetail
@@ -105,8 +107,9 @@ namespace NorthPoint.Services
                 var entity =
                     ctx
                         .Financials
-                        .Single(e => e.FinancialId == model.FinancialId);
+                        .Single(e => e.FinId == model.FinId);
 
+                entity.FinId = model.FinId;
                 entity.Address = model.Address;
                 entity.ListPrice = model.ListPrice;
                 entity.PurchasePrice = model.PurchasePrice;
@@ -124,14 +127,14 @@ namespace NorthPoint.Services
             }
         }
 
-        public bool DeleteFinancial(int financialId)
+        public bool DeleteFinancial(int finId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Financials
-                        .Single(e => e.FinancialId == financialId);
+                        .Single(e => e.FinId == finId);
 
                 ctx.Financials.Remove(entity);
 

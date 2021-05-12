@@ -11,6 +11,7 @@ namespace NorthPoint.Models.Financial
 {
     public class FinancialCreate
     {
+        [Required]
         public object Address { get; set; }
 
         [DisplayName("List Price")]
@@ -20,12 +21,10 @@ namespace NorthPoint.Models.Financial
         [DisplayName("Purchase Price")]
         public int PurchasePrice { get; set; }
 
-
         [Required]
         [DisplayName("Lender's Name")]
         public string LendersName { get; set; }
 
-        [Required]
         [DisplayName("Mortgage")]
         public TypeOfMortgage TypeOfMortgages { get; set; }
 

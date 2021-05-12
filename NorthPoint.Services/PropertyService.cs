@@ -32,7 +32,7 @@ namespace NorthPoint.Services
                             City = e.City,
                             State = e.State,
                             PurchasePrice = e.PurchasePrice,
-                            //YearBuilt = e.YearBuilt,
+                            YearBuilt = e.YearBuilt,
                             CreateUtc = e.CreateUtc,
                             ModifiedUtc = e.ModifiedUtc
                         });
@@ -51,7 +51,7 @@ namespace NorthPoint.Services
                     State = model.State,
                     ZipCode = model.ZipCode,
                     PurchasePrice = model.PurchasePrice,
-                    //YearBuilt = model.YearBuilt,
+                    YearBuilt = model.YearBuilt,
                     SqFt = model.SqFt,
                     HomeTypes = model.HomeTypes,
                     ArchitecturalStyle = model.ArchitecturalStyle,
@@ -89,13 +89,12 @@ namespace NorthPoint.Services
                 return
                     new PropertyDetails
                     {
-                        PropertyId = entity.PropertyId,
                         Address = entity.Address,
                         City = entity.City,
                         State = entity.State,
                         ZipCode = entity.ZipCode,
                         PurchasePrice = entity.PurchasePrice,
-                        //YearBuilt = entity.YearBuilt,
+                        YearBuilt = entity.YearBuilt,
                         SqFt = entity.SqFt,
                         HomeTypes = entity.HomeTypes,
                         ArchitecturalStyle = entity.ArchitecturalStyle,
@@ -131,7 +130,7 @@ namespace NorthPoint.Services
                 entity.State = model.State;
                 entity.ZipCode = model.ZipCode;
                 entity.PurchasePrice = model.PurchasePrice;
-                //entity.YearBuilt = model.YearBuilt;
+                entity.YearBuilt = model.YearBuilt;
                 entity.SqFt = model.SqFt;
                 entity.HomeTypes = model.HomeTypes;
                 entity.ArchitecturalStyle = model.ArchitecturalStyle;

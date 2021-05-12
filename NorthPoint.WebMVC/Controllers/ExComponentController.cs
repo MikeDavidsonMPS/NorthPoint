@@ -60,7 +60,7 @@ namespace NorthPoint.WebMVC.Controllers
             var model =
                 new ExComponentEdit
                 {
-                    ExComplId = detail.ExComplId,
+                    ExterId = detail.ExterId,
                     Foundation = detail.Foundation,
                     FoundationCondition = detail.FoundationCondition,
                     FloorStructure = detail.FloorStructure,
@@ -106,7 +106,7 @@ namespace NorthPoint.WebMVC.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.ExComplId != id)
+            if (model.ExterId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);

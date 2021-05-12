@@ -11,10 +11,9 @@ namespace NorthPoint.Models.Financial
 {
     public class FinancialListItem
     {
-        public int PropertyId { get; set; }
-        public int FinancialId { get; set; }
+        public int FinId { get; set; }
 
-        [DisplayName("Property Address")]
+
         public object Address { get; set; }
         public object City { get; set; }
         public object State { get; set; }
@@ -24,40 +23,32 @@ namespace NorthPoint.Models.Financial
         [DisplayName("List Price")]
         public int ListPrice { get; set; }
 
-        [Required]
         [DisplayName("Purchase Price")]
         public int PurchasePrice { get; set; }
 
-
-        [Required]
         [DisplayName("Lender's Name")]
         public string LendersName { get; set; }
 
-        [Required]
         [DisplayName("Mortgage")]
-        public TypeOfMortgage TypeOfMortgages { get; set; }
+        public TypeOfMortgage TypeOfMortgage { get; set; }
 
-        [Required]
         [DisplayName("Interest Rate")]
         public int InterestRate { get; set; }
 
-        [Required]
         [DisplayName("Down Payment")]
         public int DownPayment { get; set; }
 
-        [Required]
         [DisplayName("Monthly Payments")]
         public int MonthlyPayments { get; set; }
 
-
-        [Required]
         [DisplayName("Tax Assessment")]
         public int TaxAssessment { get; set; }
 
-        [Required]
         [DisplayName("Annual Tax Amount")]
         public int AnnualTaxAmount { get; set; }
+
+        [DisplayName("Remaining Years on Loan")]
         public object RemainingYearsOnLoan { get; set; }
-    
+        
     }
 }

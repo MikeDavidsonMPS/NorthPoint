@@ -12,9 +12,10 @@ namespace NorthPoint.Models.ExComponent
     public class ExComponentListItem
     {
         public int PropertyId { get; set; }
+        public int ExterId { get; set; }
+
 
         public object Address { get; set; }
-
     
         [DisplayName("Foundation")]
         public Foundations Foundation { get; set; }

@@ -12,12 +12,12 @@ namespace NorthPoint.Data
      public class ExComponent
     {
         [Key]
-        public int ExComplId { get; set; }
+        public int ExterId { get; set; }
 
-        //[ForeignKey(nameof(PropertyId))]
-        //public string PropertyId { get; set; }
+        [ForeignKey(nameof(ApplicationUser))]
+        public string UserId { get; set; }
 
-        //public virtual Property Property { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
         [Required]
         public object Address { get; set; }

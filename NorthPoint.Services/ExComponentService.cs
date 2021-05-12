@@ -27,7 +27,7 @@ namespace NorthPoint.Services
                         .Select(e =>
                         new ExComponentListItem
                         {
-                            PropertyId = e.PropertyId,
+                            ExterId = e.ExterId,
                             Address = e.Address,
                             Foundation= e.Foundation,
                             FloorStructure = e.FloorStructure,
@@ -58,7 +58,7 @@ namespace NorthPoint.Services
             var entity =
                 new ExComponent()
                 {
-                    ExComplId = model.ExComplId,
+                    Address = model.Address,
                     Foundation = model.Foundation,
                     FoundationCondition = model.FoundationCondition,
                     FloorStructure = model.FloorStructure,
@@ -109,12 +109,11 @@ namespace NorthPoint.Services
                 var entity =
                     ctx
                         .ExComponents
-                        .Single(e => e.ExComplId == id);
+                        .Single(e => e.ExterId == id);
 
                 return
                     new ExComponentDetail
                     {
-                        ExComplId  = entity.ExComplId,
                         Address = entity.Address,
                         Foundation= entity.Foundation,
                         FoundationCondition = entity.FoundationCondition,
@@ -171,9 +170,8 @@ namespace NorthPoint.Services
                 var entity =
                     ctx
                         .ExComponents
-                        .Single(e => e.ExComplId == model.ExComplId);
+                        .Single(e => e.ExterId == model.ExterId);
 
-                    entity.ExComplId = model.ExComplId;
                     entity.Foundation = model.Foundation;
                     entity.FoundationCondition = model.FoundationCondition;
                     entity.FloorStructure = model.FloorStructure;
@@ -213,14 +211,14 @@ namespace NorthPoint.Services
             }
         }
 
-        public bool DeleteExComponent(int exComplId)
+        public bool DeleteExComponent(int exterId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .ExComponents
-                        .Single(e => e.ExComplId == exComplId);
+                        .Single(e => e.ExterId == exterId);
 
                 ctx.ExComponents.Remove(entity);
 
