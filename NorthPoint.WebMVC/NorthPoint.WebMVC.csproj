@@ -256,11 +256,19 @@
     <Content Include="Views\Financial\Details.cshtml" />
     <Content Include="Views\Financial\Edit.cshtml" />
     <Content Include="Views\Financial\Delete.cshtml" />
+    <Content Include="Views\ExComponent\Index.cshtml" />
+    <Content Include="Views\ExComponent\Details.cshtml" />
+    <Content Include="Views\ExComponent\Edit.cshtml" />
+    <Content Include="Views\ExComponent\Delete.cshtml" />
+    <Content Include="Views\Mechanical\Index.cshtml" />
+    <Content Include="Views\Mechanical\Create.cshtml" />
+    <Content Include="Views\Mechanical\Details.cshtml" />
+    <Content Include="Views\Mechanical\Edit.cshtml" />
+    <Content Include="Views\Mechanical\Delete.cshtml" />
+    <Content Include="Views\ExComponent\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ExComponent\" />
-    <Folder Include="Views\Mechanical\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

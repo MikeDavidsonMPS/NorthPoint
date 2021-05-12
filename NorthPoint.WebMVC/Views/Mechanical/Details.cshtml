@@ -1,0 +1,26 @@
+﻿@model NorthPoint.Models.Mechanical.MechanicalDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MechanicalDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MechId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MechId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MechId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

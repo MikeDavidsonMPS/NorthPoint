@@ -1,0 +1,26 @@
+﻿@model NorthPoint.Models.ExComponent.ExComponentDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ExComponentDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ExterId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExterId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExterId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
